@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid');
-const changeSize = document.querySelector('#changeGrid');
+const changeSize = document.querySelector('#resize');
 const eraser = document.querySelector('#eraser');
-const colorPicker = document.querySelector('.colorPicker');
+const colorPicker = document.querySelector('#color-picker');
 const reset = document.querySelector('#reset');
 
 
@@ -46,6 +46,9 @@ eraser.addEventListener('click', () => {
 reset.addEventListener('click', () => {
   grid.innerHTML = "";
   generateSquares(16);
+  currentColor = "grey";
+  colorPicker.value = "#808080";
+ 
 });
 
 colorPicker.addEventListener('input', () => {
